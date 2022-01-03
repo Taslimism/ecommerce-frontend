@@ -1,0 +1,13 @@
+.cartitem-container {
+  display: flex;
+  top: 85px;
+  width: 80%;
+  margin: 1px auto;
+  background-color: white;
+}
+
+.info-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}

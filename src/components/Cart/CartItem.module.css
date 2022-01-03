@@ -1,0 +1,15 @@
+.cartitem-container {
+  position: relative;
+  display: flex;
+  gap: 40px;
+  top: 85px;
+  width: 80%;
+  margin: 10px auto;
+  background-color: white;
+}
+
+.info-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}

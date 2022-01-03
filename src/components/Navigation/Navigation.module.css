@@ -1,0 +1,35 @@
+.main-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 0 1em;
+  height: 60px;
+  margin: auto 0;
+  background: white;
+}
+.cart,
+.profile {
+  width: 35px;
+  height: 30px;
+  cursor: pointer;
+  color: white;
+}
+.btn {
+  padding: 1em 0.7em;
+  border: none;
+  background-color: var(--dark);
+  color: white;
+  cursor: pointer;
+}
+.items-in-cart {
+  border-radius: 1000px;
+  padding: 4px 8px;
+  background-color: var(--deep-yellow);
+  color: white;
+}
+.main-header a {
+  text-decoration: none;
+  display: flex;
+  gap: 2px;
+}

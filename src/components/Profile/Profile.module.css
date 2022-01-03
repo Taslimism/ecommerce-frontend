@@ -1,0 +1,12 @@
+.main-container {
+  min-height: 100vh;
+  position: relative;
+  top: 85px;
+  margin-bottom: 85px;
+}
+.message {
+  top: 90px;
+  width: 80%;
+  margin: 0 auto;
+  background-color: #fff;
+}

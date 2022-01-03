@@ -1,24 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+
+import LandingPage from './pages/LandingPage'
+import ProductListingPage from './pages/ProductListing';
+import ProductItemPage from './pages/ProductItem';
+import CartPage from './pages/CartPage';
+import ProfilePage from './pages/ProfilePage';
+
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
+import Form from './components/Form/Form';
+
+
+
+
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Header />
+      <Routes>
+        <Route path='/:authorName' element={<ProductListingPage />} exact></Route>
+        <Route path='/profile' element={<ProfilePage />} exact></Route>
+        <Route path='/cart' element={<CartPage />} exact></Route>
+        <Route path='/' element={<LandingPage />} exact></Route>
+        <Route path="/form/:formType" element={<Form />} exact></Route>
+        <Route path="/:authorName/:id" element={<ProductItemPage />}></Route>
+      </Routes>
+      <Footer />
+    </Router>
   );
 }
 

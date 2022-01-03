@@ -1,0 +1,17 @@
+.cart-container {
+  width: 100%;
+  min-height: 100vh;
+  gap: 20px;
+}
+
+.payment-container {
+  background-color: white;
+  margin: 0 auto;
+  width: 80%;
+  position: relative;
+  margin-top: 90px;
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

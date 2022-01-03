@@ -1,0 +1,39 @@
+.banner,
+.banner-img {
+  width: 100vw;
+  height: 700px;
+}
+.banner {
+  font-family: 'Roboto Condensed', sans-serif;
+  filter: brightness(0.7);
+  height: 700px;
+  background-color: var(--dark);
+}
+
+.quote {
+  font-size: 46px;
+  text-align: center;
+  position: relative;
+  bottom: 70%;
+  color: black;
+  background-color: white;
+  width: 80%;
+  margin: 0 auto;
+  padding: 10px 0;
+  z-index: 100;
+}
+@media screen and (max-width: 640px) {
+  .banner-img {
+    visibility: hidden;
+  }
+  .banner {
+    background: url(https://b-ookstore.web.app/images/library-small.jpg);
+    background-position: fit-content;
+    background-repeat: no-repeat;
+    height: 400px;
+  }
+  .quote {
+    font-size: 16px;
+    bottom: 150%;
+  }
+}
