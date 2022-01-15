@@ -30,13 +30,11 @@ const Cart = () => {
                     const { cart } = data.data;
                     setCartItems(cart[0].items);
                     setTotalPrice(Number.parseInt(cart[0].price).toFixed(2));
-                    console.log('logged in');
-
                 }
             } else {
                 const product = JSON.parse(localStorage.getItem('cart'));
                 let productData = [];
-                console.log('not logged in');
+
                 if (product.length > 0) {
                     product.forEach(product => {
                         (async () => {
@@ -66,9 +64,9 @@ const Cart = () => {
 
     return (
         <div className={style["cart-container"]}>
-            {cartItems && cartItems.length > 0 && cartItems.map(cartItem => <CartItem key={uuid()} cartData={cartItem} />)}
+            {cartItems && cartItems.length > 0 && cartItems.map(cartItem => <CartItem key={uuid()} setTotalPrice={setTotalPrice} cartData={cartItem} />)}
             {
-                totalPrice && <div className={style["payment-container"]}>
+                totalPrice && totalPrice !== 0 && <div className={style["payment-container"]}>
                     <h3 className={style["total"]}>Total Price: &#8377; {totalPrice}</h3>
                     <PaymentButton text={`pay now`} />
                 </div>

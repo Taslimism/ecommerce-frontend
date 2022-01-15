@@ -11,3 +11,12 @@
   flex-direction: column;
   justify-content: space-between;
 }
+.message {
+  top: 90px;
+  width: 80%;
+  margin: 0 auto;
+  background-color: #fff;
+}
+.order-container {
+  margin: 20px 0;
+}

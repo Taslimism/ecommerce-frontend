@@ -81,6 +81,7 @@ const Form = () => {
 
     const switchFormHandler = (e) => {
         e.preventDefault();
+        e.stopPropagation();
         if (path === 'register')
             window.location = '/form/login';
         else

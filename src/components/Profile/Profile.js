@@ -8,7 +8,7 @@ import Order from './Order'
 const Profile = () => {
 
     const [orderData, setOrderData] = useState([]);
-    const [price, setPrice] = useState();
+
 
     useEffect(() => {
 
@@ -20,18 +20,21 @@ const Profile = () => {
                 }
 
             })
+            // console.log(data.data[0]);
+            if (data.status === 'success') {
 
-            if (data.data.status === 'success') {
-                setPrice(data.data[0][0].amount);
-                setOrderData(data.data[0][0].items);
+                setOrderData(data.data[0]);
             }
         })();
     }, [])
 
     console.log(orderData)
     return <div className={style["main-container"]}>
-        {orderData && orderData.length > 0 && orderData.map(order => <Order key={uuid()} order={order} />)}
-        {price && <h2 className={style["message"]}>Congrats, Order Successfully placed! for &#8377; {price / 100}</h2>}
+        {orderData && orderData.length > 0 && orderData.map(order => {
+            console.log(order);
+            return <Order key={uuid()} order={order} />
+        })}
+
     </div>
 }
 

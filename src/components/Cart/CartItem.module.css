@@ -13,3 +13,9 @@
   flex-direction: column;
   justify-content: space-between;
 }
+.delete-icon {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  cursor: pointer;
+}

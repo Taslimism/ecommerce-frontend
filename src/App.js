@@ -7,11 +7,7 @@ import CartPage from './pages/CartPage';
 import ProfilePage from './pages/ProfilePage';
 
 import Header from './components/Header/Header';
-import Footer from './components/Footer/Footer';
 import Form from './components/Form/Form';
-
-
-
 
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 
@@ -27,7 +23,7 @@ function App() {
         <Route path="/form/:formType" element={<Form />} exact></Route>
         <Route path="/:authorName/:id" element={<ProductItemPage />}></Route>
       </Routes>
-      <Footer />
+
     </Router>
   );
 }
