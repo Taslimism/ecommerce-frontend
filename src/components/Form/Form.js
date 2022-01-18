@@ -65,7 +65,7 @@ const Form = () => {
                     })
                     localStorage.setItem('cart', JSON.stringify([]));
                 }
-                window.history.back();
+                window.location = '/';
             }
         } catch (err) {
             setIsSomethingWrong(true);
